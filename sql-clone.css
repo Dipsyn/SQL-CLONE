@@ -1,0 +1,701 @@
+
+/* The CSS properties we use for flex container are: 
+1   flex-direction (row,column,row-reverse,column-reverse)
+
+2   flex-wrap (wrap, nowrap, wrap-reverse)
+
+3   flex-flow (shorthand property for setting both the flex-direction and flex-wrap properties.)
+
+4   flex-shrink()
+
+5   flex-basis()
+
+6   justify-content(center, flex-start, flex-end, space-around, space-between, space-evenly) and it works on the x-axis ie,width)
+
+7   align-items (center, flex-start, flex-end, stretch, baseline, normal) works on the y-axis, ie height)used to align the flex items
+
+8   align-content(center, stretch, flex-start, flex-end, space-around, space-between, space-evenly)used to align the flex lines
+
+*/
+
+/* The CSS properties we use for flex items are: 
+1   order
+
+2   flex-glow
+
+3   flex-shrink
+
+4   flex-basis
+
+5   flex
+
+6   align-self
+*/
+
+*{
+    /* overflow: hidden; */
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+.nav-bar{
+    display: flex;
+    box-shadow: 0px 0px 20px 1px rgb(234, 233, 233);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 0 5%;
+    background-color: white;
+    justify-content: space-around;
+    z-index: 99;
+    /* overflow-x: hidden; */
+}
+
+.list-links{
+display: flex;
+gap: 3rem;
+font-size: 15px;
+font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+font-weight: bold;
+align-items:center;
+color:rgb(66, 66, 130);
+}
+
+.main-section{
+    display: flex;
+    margin-top:-80px;
+    gap: 3rem;
+    width: 100%;
+    justify-content:space-around;
+    background-color: rgba(202, 197, 172, 0.096);
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    z-index: 99;
+    padding: 0 10%;
+
+}
+
+.main-section h1{
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 75px;
+    color:#091650;
+    margin-top: 180px;
+    margin-left: 70px;
+    font-weight: bolder;
+    line-height:70px;
+    
+}
+
+.main-section h3{
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.737);
+    margin-top: 10px;
+    margin-left: 70px;
+    line-height: 25px;
+    word-spacing: 5px;
+}
+
+.right-img{
+    height: 500px;
+    width: 500px;
+    margin-top: 100px;
+    margin-right: 400px;
+}
+
+.main-section .btn{
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    background-color: #081f89;
+    width: 130px;
+    color: white;
+    border:none;
+    border-radius:10px;
+    padding: 20px;
+    font-weight: bolder;
+    margin-left:70px;
+    margin-top: 30px;
+}
+
+
+.section1 h2{
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 45px;
+    color:#091650;
+    margin-left: 230px;
+    margin-top: 50px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    grid-template-rows: repeat(1, 350px);
+    justify-content: space-around;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 30px;
+    column-gap: 20px;
+}
+
+.image-1{
+    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/06/college.jpg);
+    background-size:cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.image-2{
+    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/06/prof.jpg);
+    background-size:cover;
+    filter: grayscale(100%);
+}
+
+.image-3{
+    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/06/certificate.jpg);
+    background-size:cover;
+    filter: grayscale(100%);
+}
+
+.courses{
+    display: flex;
+    gap: 10px;
+    border: 2px solid red;
+    width:100%;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 3px; 
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.left-header{
+color:#091650;
+font-size: 22px;
+font-weight: bolder;
+margin-top: 20px;
+margin-left: 18px;
+}
+
+.small-text-left{
+    color:rgba(0, 0, 0, 0.518);
+    opacity: 300px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+    margin-left: 18px;
+    }
+
+.middle-header{
+    color:#091650;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 610px;
+    
+}
+
+.small-text-middle{
+    color:rgba(0, 0, 0, 0.518);
+    opacity: 300px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+    margin-left: 610px;
+    }
+
+.right-header{
+    color:#091650;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 1000px;
+}
+
+.small-text-right{
+    color:rgba(0, 0, 0, 0.518);
+    opacity: 300px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+    margin-left: 1000px;
+    }
+
+
+
+/* .courses{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(3, 40%);
+    grid-template-rows: repeat(1, 230px);
+    justify-content: space-between;
+    column-gap: 3rem;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 3px; 
+}
+
+.heading-1{
+margin-left: 1px;
+margin-top: 30px;
+color:#091650;
+font-size: 22px;
+font-weight: bolder;
+float: left;
+}
+
+.heading-2{
+margin-left: -110px;
+margin-top: 30px;
+color:#091650;
+font-size: 22px;
+font-weight: bolder;
+float: left;
+}
+
+.heading-3{
+margin-left: -210px;
+margin-top: 30px;
+color:#091650;
+font-size: 22px;
+font-weight: bolder;
+float: left;
+}
+
+.small-text{
+color:rgba(0, 0, 0, 0.518);
+opacity: 300px;
+font-size: 15px;
+line-height: 25px;
+margin-left: 3px;
+margin-top: 15px;
+} */
+
+.learn-flex{
+    display: flex;
+    margin-top: -15px;
+}
+
+.learn-1{
+    color: #091650;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-left: 150px;
+    font-weight: bolder;
+}
+
+.learn-2{
+    color: #091650;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-left: 410px;
+    font-weight: bolder;
+}
+
+.learn-3{
+    color: #091650;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-left: 415px;
+    font-weight: bolder;
+}
+
+.marker{
+    background-color:rgb(14, 39, 83);
+}
+
+.hr1{
+    margin-left: 150px;
+    margin-top:6px;
+    width: 80px;
+    height: 2.5px;
+}
+
+.hr2{
+    margin-left: 650px;
+    margin-top: -2px;
+    width: 80px;
+    height: 2px;
+}
+
+.hr3{
+    margin-left: 1150px;
+    margin-top: -2px;
+    width: 80px;
+    height: 2px;
+}   
+
+.grid-container2{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(1, 600px);
+    justify-content: space-between;
+    column-gap: 3rem;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+    border: 2px solid red;
+    
+}
+
+.heading1{
+color:black;
+font-size: 23px;
+font-weight: bolder;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+opacity: 80%;
+}
+
+.spann{
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.spann2{
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.text-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.text-cont1 {
+    width: 25%; /* Adjust the width to fit 3 sections */
+    color:black;
+    font-size: 12px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 150px;
+}   
+
+.text-cont2 {
+    width: 25%; /* Adjust the width to fit 3 sections */
+    color:black;
+    font-size: 12px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 55px;
+}
+
+.text-cont3 {
+    width: 25%; /* Adjust the width to fit 3 sections */
+    color:black;
+    font-size: 12px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 45px;
+}
+
+.hr{
+    width: 350px;
+    height: 1px;
+    background-color: rgb(110, 110, 217);
+    margin-top: 4px;
+}
+
+.top-courses{
+    font-size: 50px;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    margin-left: 265px;
+    margin-top: -60px;
+}
+
+.grid-img-cont{
+    display: grid;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 2100px;
+    grid-template-columns: repeat(2, 550px);
+    grid-template-rows: repeat(2, 900px);
+    justify-content: center;
+    gap: 4rem;
+    /* border: 3px solid red; */
+    padding-top: 40px;
+    
+}
+
+.grid-1{
+   background-color: lightblue;
+    background-size:cover;
+    background-position: center;
+    box-shadow: 1px 30px 100px 6px rgba(182, 245, 182, 0.769);
+    border-radius: 30px;
+    margin-top: 20px;
+    
+}
+
+.grid-1 h1{
+    margin-left:50px;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;;
+    font-size: 31px;
+    opacity: 80%;
+    margin-bottom: 15px;
+}
+
+.text-a{
+font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;;
+margin-left: 50px;
+margin-right: 50px;
+font-weight: bold;
+line-height: 30px;
+font-size: 16px;
+}
+
+.link-btn1{
+font-size: 16px;
+font-weight: bolder;
+color: rgb(5, 5, 159);
+text-decoration:underline;
+margin-left: 50px;
+border: 0px;
+background-color:lightblue;
+}
+
+.grid-2{
+    background-color: rgba(255, 255, 0, 0.194);
+    background-size:cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 1px 30px 100px 6px pink;
+    margin-bottom: 130px;
+    margin-top: -150px;
+    
+}
+
+.grid-2 h1{
+    margin-left:50px;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;;
+    font-size: 31px;
+    opacity: 80%;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+    .link-btn2{
+        font-size: 16px;
+        font-weight: bolder;
+        color: rgb(5, 5, 159);
+        text-decoration:underline;
+        margin-left: 50px;
+        border: 0px;
+        background-color: rgba(255, 255, 0, 0);
+        }
+
+.grid-3{
+    background-color:rgba(156, 125, 86, 0.432);
+    background-size:cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 1px 30px 100px 6px rgba(182, 245, 182, 0.769);
+}
+
+.grid-3 h1{
+    margin-left:50px;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;;
+    font-size: 31px;
+    opacity: 80%;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.link-btn3{
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(5, 5, 159);
+    text-decoration:underline;
+    margin-left: 50px;
+    border: 0px;
+    background-color: rgba(156, 125, 86, 0);
+    }
+
+.grid-4{
+    background-color:rgba(183, 129, 183, 0.662);
+    background-size:cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 1px 30px 100px 6px pink;
+    margin-top: -150px;
+    margin-bottom: 80px;
+}
+
+.grid-4 h1{
+    margin-left:50px;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;;
+    font-size: 31px;
+    opacity: 80%;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.link-btn4{
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(5, 5, 159);
+    text-decoration:underline;
+    margin-left: 50px;
+    border: 0px;
+    background-color: rgba(183, 129, 183, 0);
+    }
+
+.take{
+    margin-left: 270px;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    opacity:60%;
+    margin-left: 270px;
+}
+
+.view{
+    margin-left: 270px;
+    text-decoration: underline;
+    color: rgb(32, 32, 116);
+    font-family: ETmodules !important;
+    font-weight: bolder;
+    
+}
+
+.img-1{
+background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/01/software-engineering-630x330-1.webp);
+height: 300px;
+width: 450px;
+background-position: center;
+background-size:contain;
+background-repeat: no-repeat;
+margin-top: 50px;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+.img-2{
+background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/01/DATA-SQI.jpg);
+height: 300px;
+width: 450px;
+background-position: center;
+background-size:contain;
+background-repeat: no-repeat;
+margin-top: 50px;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+.img-3{
+    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/product.jpg);
+    height: 300px;
+    width: 450px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    }
+
+    .img-4{
+        background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/digital-literacy.jpg);
+        height: 300px;
+        width: 450px;
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        }
+
+    .alumni{
+        font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+        font-size: 27px;
+        font-size: 30px;
+        margin-left: 250px;
+        margin-bottom: 45px;
+        line-height: 1.2em;
+        }
+
+        .flex-container{
+            display: flex;
+            gap: 1em;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* align-content: space-between; */
+            height: 600px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        
+        .flex-container > div 
+        {
+            width: 20%;
+            height: 200px;
+        }
+
+        .logo1{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/google.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo2{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Interswitch.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo3{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Andela-log-landscape-blue-400px.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo4{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Microsoft_logo.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo5{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Paystack.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo6{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/brewery.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo7{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Wema-Bank-Logo.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo8{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/clan-logo.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo9{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/edozzier.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo10{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/moneymie.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo11{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Nigerian_Army.png);
+            background-repeat: no-repeat;
+        }
+
+        .logo12{
+            background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/aella-credit.png);
+            background-repeat: no-repeat;
+        }
