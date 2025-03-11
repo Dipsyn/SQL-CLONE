@@ -1,36 +1,3 @@
-/* The CSS properties we use for flex container are: 
-1   flex-direction (row,column,row-reverse,column-reverse)
-
-2   flex-wrap (wrap, nowrap, wrap-reverse)
-
-3   flex-flow (shorthand property for setting both the flex-direction and flex-wrap properties.)
-
-4   flex-shrink()
-
-5   flex-basis()
-
-6   justify-content(center, flex-start, flex-end, space-around, space-between, space-evenly) and it works on the x-axis ie,width)
-
-7   align-items (center, flex-start, flex-end, stretch, baseline, normal) works on the y-axis, ie height)used to align the flex items
-
-8   align-content(center, stretch, flex-start, flex-end, space-around, space-between, space-evenly)used to align the flex lines
-
-*/
-
-/* The CSS properties we use for flex items are: 
-1   order
-
-2   flex-glow
-
-3   flex-shrink
-
-4   flex-basis
-
-5   flex
-
-6   align-self
-*/
-
 *{
     /* overflow: hidden; */
     margin: 0px;
@@ -52,18 +19,79 @@ body{
     background-color: white;
     justify-content: space-around;
     z-index: 99;
-    /* overflow-x: hidden; */
 }
 
-.list-links{
-display: flex;
-gap: 3rem;
-font-size: 15px;
-font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
-font-weight: bold;
-align-items:center;
-color:rgb(66, 66, 130);
+.nav-bar-2{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
+
+
+.nav-bar-2 li{
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+}
+
+.nav-bar-2 a{
+    text-decoration: none;
+    color: #081f89;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block; 
+}
+.dropdown-content {
+    color: #000000;
+    padding: 6px 20px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    display:none;
+    position: absolute;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 2em;
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    background-color: #f9f9f9;
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding-top: 20px;
+    padding-left: 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    /* margin-top: 33px; */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.move{
+    margin-left: 8px;
+}
+
+/* .stickky {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+    z-index: 500;
+  } */
 
 .main-section{
     display: flex;
@@ -75,7 +103,6 @@ color:rgb(66, 66, 130);
     font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
     z-index: 99;
     padding: 0 10%;
-
 }
 
 .main-section h1{
@@ -89,9 +116,10 @@ color:rgb(66, 66, 130);
 }
 
 .main-section h3{
-    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 15px;
-    color:rgba(0, 0, 0, 0.737);
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 100%;
+    color: #474747 !important;
+    line-height: 1.8em;
     margin-top: 10px;
     margin-left: 70px;
     line-height: 25px;
@@ -116,6 +144,7 @@ color:rgb(66, 66, 130);
     font-weight: bolder;
     margin-left:70px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .section1 h2{
@@ -341,13 +370,14 @@ color:rgb(66, 66, 130);
     font-size: 14px;
     font-weight: 600 !important;
     text-decoration: underline !important;
+    cursor: pointer;
 }
 
 .grid-img-cont{
     display: grid;
     justify-content: center;
     padding-top: 40px;
-    width: 100%;
+    /* width: 100%; */
     height: 2100px;
     grid-template-columns: repeat(2, 550px);
     grid-template-rows: repeat(2, 900px);
@@ -408,6 +438,7 @@ letter-spacing: -0.01em;
 font-size: 14px;
 font-weight: 600 !important;
 text-decoration: underline !important;
+cursor: pointer;
 }
 
 
@@ -454,6 +485,7 @@ text-decoration: underline !important;
     font-size: 14px;
     font-weight: 600 !important;
     text-decoration: underline !important;
+    cursor: pointer;
 }
 
 .grid-3{
@@ -496,6 +528,7 @@ text-decoration: underline !important;
     font-size: 14px;
     font-weight: 600 !important;
     text-decoration: underline !important;
+    cursor: pointer;
     }
 
 
@@ -541,6 +574,7 @@ text-decoration: underline !important;
     font-size: 14px;
     font-weight: 600 !important;
     text-decoration: underline !important;
+    cursor: pointer;
     }
     
 .alumni{
@@ -563,15 +597,11 @@ text-decoration: underline !important;
     display: flex;
     justify-content: space-between;
 }
-
-/* .laptop-text-container{
-    display: flex;
-} */
      
 .laptop{ 
     display: flex;
     justify-content: space-around;
-    background-image: url(./Assets/laptop-background.jpg);
+    background-image: linear-gradient(to right,  rgba(11, 6, 39, 0.216), rgba(3, 15, 78, 0.995)), url("./Assets/laptop-background.jpg");
     width:100%;
     height: 400px;
     background-position: center;
@@ -584,9 +614,6 @@ text-decoration: underline !important;
     top: 90px;
     left: 155px;
     width: 30%;
-    /* border-radius: 300px; */
-    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-
 }
 
 .tour{
@@ -623,6 +650,7 @@ text-decoration: underline !important;
   padding-right: 30px !important;
   padding-bottom: 20px !important;
   padding-left: 30px !important;
+  cursor: pointer;
   
 }
 
@@ -648,93 +676,648 @@ margin-left: 280px;
   opacity: 75%;
 }
 
-
-
-
-
-
-
-
-
-/* 
-.flex-container{
+.scroll-container{  
+    /* border: 1px solid blue; */
     display: flex;
-    gap: 1em;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-left: 250px;
+    margin-right: 110px;
+    /* justify-content: space-between; */
+    height: auto;
+    gap: 2rem;
+}
+
+.testimony-1{
+    width: 1500px;
+    height: 270px;
+}
+
+.round-laptop{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
+    left: 90px;
+    box-shadow: 2px 3px 8px #888888;
+}
+
+.testimony-1 h2{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 55px;
+  margin-top: 15px;
+}
+
+.testimony-1 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 70px;
+    margin-top: 0px;
+    opacity: 70%;
+  }
+
+  .star1{
+    height: 30px;
+    width: 180px;
+    margin-left: 45px; ;
+  }
+
+  .review-btn{
+    background-color: #274dc9;
+    color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-color: #FFFFFF;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 300 !important;
+    margin-top: 20px;
+    margin-left: 55px;
+    padding-top: 10px !important;
+    padding-right: 35px !important;
+    padding-bottom: 10px !important;
+    padding-left: 20px !important;
+    cursor: pointer;
+  }
+
+  .round-google{
+    position: relative;
+    top: 6px;
+    left: -35px;
+    height: 22px;
+    width: 22px
+  }
+
+
+.testimony-2{
+    background-color: #8888881e;
+    padding: 10px;
+    width: 150%;
+    height: 250px;
+    margin-left: 30px;
+}
+
+.round-o{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
+    box-shadow: 2px 3px 8px #888888;
+}
+
+.testimony-2 h2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 55px;
+    margin-top: -45px;
+  }
+
+  .testimony-2 p{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 55px;
+    margin-top: 6px;
+  }
+
+  .star2{
+    height: 30px;
+    width: 140px;
+    margin-top: 20px;
+    margin-left: 10px; ;
+  }
+
+ .round-google2{
+    position: relative;
+    top: -75px;
+    left:145px;
+    height: 22px;
+    width: 22px
+  }
+
+  .testimony-2 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 400;
+    overflow-y: scroll;
+    margin-left: 5px;
+    margin-top: 6px;
+    height: 126px;
+    color: var(--text-color,#222) !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+
+
+
+
+.testimony-3{
+    background-color: #8888881e;
+    padding: 10px;
+    width: 150%;
+    height: 250px;
+    margin-left: 30px;
+}
+
+.testimony-3 h2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 55px;
+    margin-top: -45px;
+  }
+
+  .testimony-3 p{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 55px;
+    margin-top: 6px;
+  }
+
+  .testimony-3 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 400;
+    overflow-y: scroll;
+    margin-left: 5px;
+    margin-top: 6px;
+    height: 126px;
+    color: var(--text-color,#222) !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+
+
+  .sqi-cont{
+    display: flex;
+    margin-top: 120px;
+    margin-left: 200px;
+    margin-right: 200px;
+    /* border: 1px solid red; */
+    height: auto;
+    gap: 5rem;
+  }
+
+  .why-study{
+    font-size: 35px;
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    opacity: 85%;
+    gap: 2rem;
+  }
+
+  .sqi-cont-sub1{
+    width: 30%;
+    height: 500px;
+  }
+
+  .icon-all{
+    margin-top: 60px;
+    height: 40px;
+    width: 50px;
+  }
+
+  .icon-5{
+    margin-top: 110PX;
+    height: 40px;
+    width: 50px;
+  }
+
+  .icon-6{
+    margin-top: 100PX;
+    height: 50px;
+    width: 70px;
+  }
+
+  .icon-7{
+    margin-top: 20PX;
+    height: 40px;
+    width: 50px;
+  }
+
+  .why-study-text1{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+     line-height: 1.4em;
+     font-size: 20px;
+     color: #333333f0;
+  }
+
+  .why-study-text2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.65em;
+    word-wrap: break-word;
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 90%;
+  }
+
+  .sqi-cont-sub2{
+    width: 30%;
+  }
+
+  .sqi-cont-sub3{
+    width: 30%;
+  }
+
+  .laptop-phone{
+    width: 340px;
+    height: 100%;
+  }
+
+.deep_blue_background{
+    display: flex;
+    margin-top: 50px;
+    background-color: #090326 !important;
+    width: 100%;
+    height: 650px;
+}
+
+.sub_div_1{
+  width: 40%;
+}
+
+.sub_div_1 h1{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 37px;
+    color: #FFFFFF !important;
+    line-height: 1.3em;
+    padding-bottom: 10px; 
+    font-weight: 500px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.sub_div_1 h2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 20px;
+    color: #d0a73f !important;
+    margin-top: 40px;
+    margin-left: 200px;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+.sub_div_1 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    font-weight: 600px;
+    padding-top: 60px;
+    margin-left: 200px;
+}
+
+.sub_div_2{
+    width: 60%;
+  }
+
+.sub_div_2 h2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 20px;
+    color: #d0a73f !important;
+    padding-top: 80px;
+    margin-bottom: 25px;
+    padding-left: 130px;
+}
+
+.sub_div_2 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255,255,255,0.8) !important;
+    line-height: 1.65em;
+    padding-left: 130px; 
+  }
+
+  .hr-1{
+    width: 490px;
+    height: 1px;
+    background-color: #d0a73f ;
+    margin-left: 134px;
+    margin-top: 25px;
+  }
+
+  .format-1{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 20px;
+    color: #d0a73f !important;
+    padding-top: 80px;
+    padding-left: 130px;
+    margin-top: -30px;
+  }
+
+  .format-2{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 20px;
+    color: #d0a73f !important;
+    padding-top: 80px;
+    padding-left: 130px;
+  }
+
+
+  .light_blue_background{
+    background-color: #000b3f !important;
+    width: 100%;
+    height: 500px;
+  }
+
+  .light_blue_background h2{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #FFFFFF !important;
+  letter-spacing: 0.1em;
+  margin-left: 210px;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  }
+
+  .light_blue_background h1{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: #FFFFFF !important;
+  line-height: 1.2em;
+  margin-left: 210px;
+  padding-bottom: 20px;
+  }
+
+  .light_blue_background h3{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  color: #FFFFFF !important;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  line-height: 1.6em;
+  margin-left: 210px;
+  cursor: pointer;
+  }
+
+  .join-us-btn{
+    background-color: #00208A;
+    color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-color: #FFFFFF;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600 !important;
+    margin-top: 30px;
+    margin-left: 210px;
+    padding-top: 20px !important;
+    padding-right: 30px !important;
+    padding-bottom: 20px !important;
+    padding-left: 30px !important;
+    cursor: pointer;
+  }
+
+  .light_grey_background{
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 21, 249, 0.081);
+  }
+
+  .read-more{
+    background-color: #00208A;
+    color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-color: #FFFFFF;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600 !important;
+    margin-left: 210px;
+    padding-top: 20px !important;
+    padding-right: 30px !important;
+    padding-bottom: 20px !important;
+    padding-left: 30px !important;
+    cursor: pointer;
+  }
+
+  .latest-join{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 90px;
+    margin-bottom: 30px;
+  }
+
+  .latest-join h1{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #000000 !important;
+  }
+
+  .division{
+    display: flex;
     justify-content: center;
     margin-left: 200px;
     margin-right: 200px;
-}
-        
-.flex-container > div 
-{
-    width: 20%;
-    height: 200px;
-}
+    gap: 2rem;
+  }
 
-.logo1{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/google.png);
-    background-repeat: no-repeat;
-    
-}
+  .item-1{
+    width:30%;
+    height: 520px;
+    background-color: white;
+  }
 
-.logo2{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Interswitch.png);
-    background-repeat: no-repeat;
-    image
-}
+  .item-2{
+    width:30%;
+    height: 520px;
+    background-color: white;
+  }
 
+  .item-3{
+    width:30%;
+    height: 520px;
+    background-color: white;
+  }
 
-.logo3{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Andela-log-landscape-blue-400px.png);
-    background-repeat: no-repeat;
-}
-
-.logo4{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Microsoft_logo.png);
-    background-repeat: no-repeat;
-}
-
-.logo5{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Paystack.png);
-    background-repeat: no-repeat;
+.jamb-sub-comb{
+  font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif !important;
+  font-size: 16px;
+  font-weight: 500 !important;
+  color: #000000 !important;
+  line-height: 1.6em !important;
+  padding:18px 18px 0px 18px;
+  
 }
 
-.logo6{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/brewery.png);
-    background-repeat: no-repeat;
+.item-1 h3{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #F7827E !important;
+  line-height: 1.8em;
+  margin-left: 18px;
+  padding-top: 5px;
 }
 
-.logo7{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Wema-Bank-Logo.png);
-    background-repeat: no-repeat;
+.item-1 h4{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.8em;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    padding:18px 18px 0px 18px;
 }
 
-.logo8{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/clan-logo.png);
-    background-repeat: no-repeat;
+.item-2 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #F7827E !important;
+    line-height: 1.8em;
+    margin-left: 18px;
+    padding-top: 5px;
+  }
+  
+  .item-2 h4{
+      font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+      line-height: 1.8em;
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+      padding:18px 18px 0px 18px;
+  }
 
+  .item-3 h3{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #F7827E !important;
+    line-height: 1.8em;
+    margin-left: 18px;
+    padding-top: 5px;
+  }
+  
+  .item-3 h4{
+      font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+      line-height: 1.8em;
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+      padding:18px 18px 0px 18px;
+  }
+
+  .contact-address{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 120px;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .contact-1{
+    width: 15%;
+  }
+
+  .contact-2{
+    width: 18%;
+  }
+
+  .contact-3{
+    width: 15%;
+  }
+
+  .contact-4{
+    width: 17%;
+  }
+
+  .contact-5{
+    width: 18%;
+  }
+
+  .icon-cont{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 18px;
 }
 
-.logo9{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/edozzier.png);
-    background-repeat: no-repeat;
-}
+  .h2-hello{
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: #00208A !important;
+  line-height: 1.2em;
+  padding-bottom: 10px;
+  }
 
-.logo10{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/moneymie.png);
-    background-repeat: no-repeat;
-}
+    .h2-we{
+    font-size: 15px;
+    line-height: 1.3em;
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    color: #333;
+    padding-bottom: 25px;
+    opacity: 85%;
+    }
 
-.logo11{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/Nigerian_Army.png);
-    background-repeat: no-repeat;
-}
+    .small-text{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 10px;
+    }
 
-.logo12{
-    background-image: url(https://edu.sqi.ng/wp-content/uploads/2023/03/aella-credit.png);
-    background-repeat: no-repeat;
-} */
+    .enquiry-link{
+        text-decoration: none;
+        font-size: 10px;
+        color: #2ea3f2;
+        font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+    }
 
+    .h2-quick-link{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.4em;
+    justify-content: center;
+    color: #333;
+    padding-bottom: 25px;
+     }
 
+    .link-text{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: #666;
+    padding-bottom: 25px;
+    line-height: 28px;
+     }
+
+     .link-text-2{
+        font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        color: #666;
+     }
+
+     .footer-pane{
+        height: 50px;
+        width: 100%;
+        background-color: #000b3f !important;
+        margin-top: 60px;
+     }
+
+     .footer-pane h2{
+        color: #FFFFFF !important;
+        font-size: 90%;
+        font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        line-height: 1.6em;
+        padding-top: 25PX;
+        padding-left: 190PX;
+     }
